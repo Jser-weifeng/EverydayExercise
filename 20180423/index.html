@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  function execTime(t) {
+    if(!t) return;
+    // var nowTime, endTime;
+    // nowTime = new Date();
+    // endTime = new Date().getTime()+t;
+    // while(endTime >= nowTime.getTime()){
+    //   nowTime = new Date();
+    // }
+    setTimeout(function () {
+      console.log(444);
+    },t)
+  }
+  console.log(1)
+  execTime(3000)
+  console.log(2)
+</script>
+</body>
+</html>
