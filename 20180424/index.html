@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  function execTime(t, callback) {
+    setTimeout(function () {
+      callback()
+    },t)
+  }
+  console.log(1);
+  execTime(3000, function () {
+    console.log(3);
+  })
+  console.log(2);
+</script>
+</body>
+</html>
