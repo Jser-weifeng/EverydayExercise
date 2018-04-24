@@ -18,3 +18,4 @@ cloud-diy-app/src/main/webapp/.idea/
 *.iml
 .idea/
 log
+.idea/*.xml
