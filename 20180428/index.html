@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  const fn = () => a
+  const a = () => b
+  a.valueOf = () => 'a'
+  const b = () => c
+  b.valueOf = () => 'b'
+  const c = () => {}
+  c.valueOf = ()  => 'c'
+  //fn() == 'a';
+  //fn()() == 'b';
+  //fn()()() == 'c';
+  console.log(fn() == 'a')
+  console.log(fn()() == 'b')
+  console.log(fn()()() == 'c')
+
+  let bbb = new Set([1,1,4,8,5,7,2,4,6,7,1,5,7,'1','2'])
+  var newArr = Array.from(bbb)
+</script>
+</body>
+</html>

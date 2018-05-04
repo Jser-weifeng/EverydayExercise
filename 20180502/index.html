@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<style>
+  button{width: 100px; height: 30px;}
+</style>
+<input type="text" id="input">
+<button id="btn1" value="">button1</button>
+<button id="btn2" value="">button2</button>
+<button id="btn3" value="">button3</button>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+  var num = 0;
+  var next = (function () {
+    var promise = Promise.resolve()
+    return (url) => {
+      promise = promise.then(()=>{
+        return new Promise((resolve => {
+          setTimeout(()=>{
+            num++;
+            $('#input').val(url + '第' + num + '次');
+            console.log(url + '第' + num + '次');
+            resolve();
+          },Math.random()*3000);
+        }))
+      })
+    }
+  })();
+  $('#btn1').click(()=>{
+    next('url1');
+  })
+  $('#btn2').click(()=>{
+    next('url2');
+  })
+  $('#btn3').click(()=>{
+    next('url3');
+  })
+</script>
+</body>
+</html>

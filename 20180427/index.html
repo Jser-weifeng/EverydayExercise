@@ -19,6 +19,18 @@
     }
 
   }
+  //answer
+  /*function fn(){
+    const timer1 = setTimeout(()=>console.log('a'))
+    return ()=>{
+      window.clearTimeout(timer1)
+      const timer2 = setTimeout(()=>console.log('b'))
+      return ()=>{
+        window.clearTimeout(timer2)
+        console.log('c')
+      }
+    }
+  }*/
   fn();
   fn()();
   fn()()();
